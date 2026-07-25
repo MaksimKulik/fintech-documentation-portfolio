@@ -1,0 +1,1142 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Selected product and API documentation samples for payment platforms.">
+      
+      
+      
+        <link rel="canonical" href="https://maksimkulik.github.io/fintech-documentation-portfolio/api/create-payment/">
+      
+      
+        <link rel="prev" href="../../guides/payment-routing/">
+      
+      
+        <link rel="next" href="../authentication-webhooks/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Create a Payment - Fintech Documentation Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Onest:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Onest";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/api-components.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/signal-admonitions.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-a-payment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fintech Documentation Portfolio" class="md-header__button md-logo" aria-label="Fintech Documentation Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fintech Documentation Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create a Payment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../guides/payment-routing/" class="md-tabs__link">
+          
+  
+  
+  Documentation Samples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../profile/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Profile
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fintech Documentation Portfolio" class="md-nav__button md-logo" aria-label="Fintech Documentation Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+
+    </a>
+    Fintech Documentation Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Samples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation Samples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/payment-routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payment Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Payment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Payment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication-webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication & Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="create-a-payment">Create a Payment<a class="headerlink" href="#create-a-payment" title="Permanent link">&para;</a></h1>
+<p>Creates a payment and returns the URL where the customer completes the payment flow.</p>
+<div class="admonition warning">
+<p class="admonition-title">Use a stable idempotency key</p>
+<p>Send one unique <code>Idempotency-Key</code> for each intended payment. Reuse the same key when retrying after a timeout, but generate a new key for a new payment.</p>
+</div>
+<h2 id="endpoint">Endpoint<a class="headerlink" href="#endpoint" title="Permanent link">&para;</a></h2>
+<p><span class="api-method post">POST</span> <code>/api/v1/payments</code></p>
+<section class="api-code-card api-code-tabs api-code-card--aside" data-api-code-type="request">
+  <div class="api-code-card__header">
+    <div class="api-code-card__endpoint">
+      <span class="api-code-method api-code-method--post">POST</span>
+      <code>/api/v1/payments</code>
+    </div>
+    <details class="api-code-select">
+      <summary>HTTP</summary>
+      <div class="api-code-select__menu"></div>
+    </details>
+  </div>
+  <div class="api-code-card__body">
+    <div class="api-code-option is-active" data-label="HTTP" data-language="http" data-content-type="application/json" markdown="1">
+
+<div class="language-http highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">POST</span> <span class="nn">/api/v1/payments</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">api.example-payments.com</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="na">X-Api-Key-Id</span><span class="o">:</span> <span class="l">7d9181bd-5442-4ea7-9ad8-85e74a82f3d2</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="na">X-Signature</span><span class="o">:</span> <span class="l">79d965cd4e62967a...</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="na">X-Timestamp</span><span class="o">:</span> <span class="l">1784894400</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="na">Idempotency-Key</span><span class="o">:</span> <span class="l">payment-checkout-1042</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">&quot;reference_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checkout-1042&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">129.5</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">&quot;payment_method_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ee8d8b23-2f27-47a5-93dc-bbf96ab352de&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">&quot;customer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer-778&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alex@example.com&quot;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nt">&quot;callback_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://merchant.example/webhooks/payments&quot;</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">&quot;return_urls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://merchant.example/checkout/success&quot;</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nt">&quot;failure&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://merchant.example/checkout/failure&quot;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</div>
+
+<div class="api-code-option" data-label="cURL" data-language="bash" data-content-type="application/json" markdown="1">
+
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://api.example-payments.com/api/v1/payments&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;X-Api-Key-Id: 7d9181bd-5442-4ea7-9ad8-85e74a82f3d2&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;X-Signature: 79d965cd4e62967a...&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;X-Timestamp: 1784894400&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Idempotency-Key: payment-checkout-1042&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s1">    &quot;reference_id&quot;: &quot;checkout-1042&quot;,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s1">    &quot;amount&quot;: 129.5,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s1">    &quot;currency&quot;: &quot;EUR&quot;,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="s1">    &quot;payment_method_id&quot;: &quot;ee8d8b23-2f27-47a5-93dc-bbf96ab352de&quot;,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s1">    &quot;customer&quot;: {&quot;id&quot;: &quot;customer-778&quot;, &quot;email&quot;: &quot;alex@example.com&quot;},</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="s1">    &quot;callback_url&quot;: &quot;https://merchant.example/webhooks/payments&quot;,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="s1">    &quot;return_urls&quot;: {</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="s1">      &quot;success&quot;: &quot;https://merchant.example/checkout/success&quot;,</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="s1">      &quot;failure&quot;: &quot;https://merchant.example/checkout/failure&quot;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="s1">    }</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="s1">  }&#39;</span>
+</span></code></pre></div>
+
+</div>
+  </div>
+</section>
+
+<section class="api-code-card api-code-tabs api-code-card--aside" data-api-code-type="response">
+  <div class="api-code-card__header">
+    <div class="api-code-card__endpoint api-code-card__response-current">
+      <span class="api-code-status api-code-status--success">201</span>
+      <span class="api-code-card__response-text">Created. Payment created successfully.</span>
+    </div>
+    <details class="api-code-select">
+      <summary>201</summary>
+      <div class="api-code-select__menu"></div>
+    </details>
+  </div>
+  <div class="api-code-card__body">
+    <div class="api-code-option is-active" data-label="201" data-language="json" data-content-type="application/json" data-status="201" data-status-text="Created. Payment created successfully." markdown="1">
+
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6c959fed-0e69-4d8c-b0c1-0c9f343f6d8f&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;reference_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checkout-1042&quot;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CREATED&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">129.5</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">&quot;checkout_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://pay.example-payments.com/p/6c959fed&quot;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-07-24T12:00:00Z&quot;</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-07-24T12:00:00Z&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</div>
+
+<div class="api-code-option" data-label="409" data-language="json" data-content-type="application/json" data-status="409" data-status-text="Conflict. The idempotency key has already been used with different data." markdown="1">
+
+<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IDEMPOTENCY_CONFLICT&quot;</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The idempotency key belongs to a different request.&quot;</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;req_01J3MYNQ7J5A5ZA3M6YCTK84RG&quot;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</div>
+  </div>
+</section>
+
+<section class="api-doc api-section">
+  <div class="api-section__header">
+    <h2 class="api-section__title">Headers</h2>
+  </div>
+  <div class="api-section__body">
+    <div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">X-Api-Key-Id</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· uuid</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">API key identifier issued for the merchant integration.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">X-Signature</span>
+<span class="api-field__type">string</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Request signature generated from the HTTP method, request path without query string, raw request body, and timestamp.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">X-Timestamp</span>
+<span class="api-field__type">integer</span>
+<span class="api-field__format">· int64</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Unix epoch timestamp in seconds used in the signature base string.</p>
+
+</div>
+  </div>
+</section>
+
+<section class="api-doc api-section">
+  <div class="api-section__header">
+    <h2 class="api-section__title">Additional header</h2>
+  </div>
+  <div class="api-section__body">
+    <div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">Idempotency-Key</span>
+<span class="api-field__type">string</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Merchant-generated key that makes retries safe.</p>
+<p class="api-field__meta">Constraints: <code>1-64 printable ASCII characters</code></p>
+
+</div>
+  </div>
+</section>
+
+<section class="api-doc api-schema">
+  <div class="api-schema__header">
+    <h2 class="api-schema__title">Request body</h2>
+    <span class="api-schema__content-type">application/json</span>
+  </div>
+  <p class="api-schema__description">Payment details and merchant callback destinations.</p>
+  <div class="api-schema__body">
+    <div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">reference_id</span>
+<span class="api-field__type">string</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Payment identifier in the merchant system.</p>
+<p class="api-field__meta">Constraints: <code>1-64 characters</code></p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">amount</span>
+<span class="api-field__type">number</span>
+<span class="api-field__format">· decimal</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Amount charged to the customer.</p>
+<p class="api-field__meta">Constraints: <code>Greater than 0; maximum 2 decimal places</code></p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">currency</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· enum</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Three-letter ISO 4217 payment currency.</p>
+<p class="api-field__meta">Possible values:</p><div class="api-field__enum"><code>EUR</code><code>GBP</code><code>USD</code></div>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">payment_method_id</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· uuid</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Enabled payment method used to route the payment.</p>
+
+</div>
+
+
+
+<details class="api-object">
+  <summary>
+    <div class="api-object__main">
+      <div class="api-field__line"><span class="api-field__name">customer</span>
+<span class="api-field__type">object</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+      <p class="api-field__description">Customer details used for risk checks and payment processing.</p>
+    </div>
+    <span class="api-object__toggle"></span>
+  </summary>
+  <div class="api-object__nested">
+    <div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">id</span>
+<span class="api-field__type">string</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Stable customer identifier in the merchant system.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">email</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· email</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Customer email address.</p>
+
+</div>
+  </div>
+</details>
+
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">callback_url</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· uri</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">HTTPS endpoint that receives payment status webhooks.</p>
+
+</div>
+
+
+
+<details class="api-object">
+  <summary>
+    <div class="api-object__main">
+      <div class="api-field__line"><span class="api-field__name">return_urls</span>
+<span class="api-field__type">object</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+      <p class="api-field__description">Merchant pages used after the hosted payment flow.</p>
+    </div>
+    <span class="api-object__toggle"></span>
+  </summary>
+  <div class="api-object__nested">
+    <div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">success</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· uri</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Destination after a successful customer flow.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">failure</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· uri</span>
+<span class="api-field__requirement api-field__requirement--required">required</span></div>
+  <p class="api-field__description">Destination after a failed or cancelled customer flow.</p>
+
+</div>
+  </div>
+</details>
+  </div>
+</section>
+
+<section class="api-doc api-responses">
+  <h2 class="api-responses__title">Responses</h2>
+  <div class="api-responses__list">
+    <details class="api-response">
+  <summary>
+    <span class="api-response__chevron"></span>
+    <span class="api-status api-status--success">201</span>
+    <span class="api-response__summary-text">Created. Payment created successfully.</span>
+    <span class="api-response__content-type">application/json</span>
+  </summary>
+  <div class="api-response__body"><p class="api-response__description">Returns the payment resource and its hosted checkout URL.</p>
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">id</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· uuid</span></div>
+  <p class="api-field__description">Platform-generated payment identifier.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">reference_id</span>
+<span class="api-field__type">string</span></div>
+  <p class="api-field__description">Merchant payment identifier supplied in the request.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">status</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· enum</span></div>
+  <p class="api-field__description">Current payment state.</p>
+<p class="api-field__meta">Possible values:</p><div class="api-field__enum"><code>CREATED</code><code>PROCESSING</code><code>SUCCEEDED</code><code>FAILED</code></div>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">amount</span>
+<span class="api-field__type">number</span>
+<span class="api-field__format">· decimal</span></div>
+  <p class="api-field__description">Payment amount.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">currency</span>
+<span class="api-field__type">string</span></div>
+  <p class="api-field__description">Payment currency.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">checkout_url</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· uri</span></div>
+  <p class="api-field__description">Hosted page where the customer completes the payment.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">created_at</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· date-time</span></div>
+  <p class="api-field__description">Creation time in UTC using ISO 8601.</p>
+
+</div>
+
+
+<div class="api-field">
+  <div class="api-field__line"><span class="api-field__name">updated_at</span>
+<span class="api-field__type">string</span>
+<span class="api-field__format">· date-time</span></div>
+  <p class="api-field__description">Most recent update time in UTC using ISO 8601.</p>
+
+</div></div>
+</details>
+
+
+
+<details class="api-response">
+  <summary>
+    <span class="api-response__chevron"></span>
+    <span class="api-status api-status--error">409</span>
+    <span class="api-response__summary-text">Conflict. Idempotency key reused with different request data.</span>
+    <span class="api-response__content-type">application/json</span>
+  </summary>
+  <div class="api-response__body"><p class="api-response__description">Returns a structured error with a stable code and request identifier.</p></div>
+</details>
+  </div>
+</section>
+
+<p><a class="api-page-link" href="../authentication-webhooks/"><span class="api-page-link__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5.5v5.8c0 5 3.4 9.6 8 10.7 4.6-1.1 8-5.7 8-10.7V5.5L12 2zm0 2.2 6 2.7v4.4c0 3.9-2.4 7.4-6 8.5-3.6-1.1-6-4.6-6-8.5V6.9l6-2.7z"></path><path d="M10 10a2 2 0 1 1 3 1.7V15h-2v-3.3A2 2 0 0 1 10 10z"></path></svg></span><span class="api-page-link__body"><span class="api-page-link__title">Authentication and webhook verification</span><span class="api-page-link__description">Generate request signatures and process status updates safely.</span></span><span class="api-page-link__arrow">›</span></a></p>
+<div class="api-reference-clear"></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../guides/payment-routing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Payment Routing">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Payment Routing
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../authentication-webhooks/" class="md-footer__link md-footer__link--next" aria-label="Next: Authentication &amp; Webhooks">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Authentication & Webhooks
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Maksym Kulyk - Documentation portfolio
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/maksim.kulik.2025/" target="_blank" rel="noopener" title="Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%BA%D1%83%D0%BB%D0%B8%D0%BA-ab55b8186" target="_blank" rel="noopener" title="LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/tables.js"></script>
+      
+        <script src="../../assets/javascripts/api-components.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Selected product and API documentation samples for payment platforms.">
+      
+      
+      
+        <link rel="canonical" href="https://maksimkulik.github.io/fintech-documentation-portfolio/profile/">
+      
+      
+        <link rel="prev" href="../api/authentication-webhooks/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Profile - Fintech Documentation Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Onest:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Onest";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/api-components.css">
+    
+      <link rel="stylesheet" href="../stylesheets/signal-admonitions.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#maksym-kulyk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Fintech Documentation Portfolio" class="md-header__button md-logo" aria-label="Fintech Documentation Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fintech Documentation Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Profile
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guides/payment-routing/" class="md-tabs__link">
+          
+  
+  
+  Documentation Samples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Profile
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Fintech Documentation Portfolio" class="md-nav__button md-logo" aria-label="Fintech Documentation Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+
+    </a>
+    Fintech Documentation Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Samples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation Samples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/payment-routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payment Routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/create-payment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Payment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/authentication-webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication & Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#education" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Education
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation samples
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#education" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Education
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation samples
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="maksym-kulyk">Maksym Kulyk<a class="headerlink" href="#maksym-kulyk" title="Permanent link">&para;</a></h1>
+<p class="profile-role-label">Technical Writer</p>
+
+<p class="portfolio-lead">Technical writer experienced in product, user, API, and integration documentation for complex software platforms. I turn product requirements, developer input, interface behavior, and technical specifications into clear documentation for end users, administrators, integrators, and internal teams.</p>
+
+<div class="profile-actions">
+  <a class="profile-action profile-action--primary" href="../assets/files/Maksym-Kulyk-CV.pdf" download>Download resume</a>
+  <a class="profile-action" href="#experience">View experience</a>
+</div>
+
+<div class="profile-overview">
+  <section class="profile-overview__section" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>
+    <dl class="profile-contact-list">
+      <div><dt>Email</dt><dd><a href="mailto:maksimkulik55@gmail.com">maksimkulik55@gmail.com</a></dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+380992380654">+380 99 238 0654</a></dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%BA%D1%83%D0%BB%D0%B8%D0%BA-ab55b8186" target="_blank" rel="noopener">Professional profile</a></dd></div>
+      <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/maksim.kulik.2025/" target="_blank" rel="noopener">Personal profile</a></dd></div>
+    </dl>
+  </section>
+  <section class="profile-overview__section" aria-labelledby="focus-heading">
+    <h2 id="focus-heading">Professional focus</h2>
+    <p>Documentation architecture, fintech and payment workflows, API reference, business logic, release notes, diagrams, and documentation quality assurance.</p>
+  </section>
+</div>
+
+<h2 id="experience">Experience<a class="headerlink" href="#experience" title="Permanent link">&para;</a></h2>
+<section class="profile-experience profile-experience--continuation" aria-label="Experience"><div class="profile-experience__list"><article class="profile-company"><span class="profile-company__logo profile-company__logo--monogram" aria-hidden="true">SP</span><div class="profile-company__body"><header class="profile-company__header"><h3 class="profile-company__name">SPRiBE</h3></header><div class="profile-company__roles"><section class="profile-role"><span class="profile-role__marker" aria-hidden="true"></span><h4 class="profile-role__title">Technical Writer</h4><p class="profile-role__employment">Full-time</p><p class="profile-role__dates">November 2025 - Present</p><p class="profile-role__description">Own full-cycle product documentation for platform products, with an emphasis on business logic clarity, operational workflows, configuration transparency, and consistent information architecture.</p><ul class="profile-role__highlights"><li>Create structured documentation for BackOffice, User Management, Admin Area, CRM, CMS, Risk Management, Payments, and other complex product modules.</li><li>Describe UI elements, workflows, tables, validation rules, configuration logic, system behavior, and edge cases.</li><li>Prepare release notes with clear functional impact and classification.</li><li>Analyze Jira tasks, videos, demos, and backend changes, then validate the resulting documentation with developers, QA engineers, and product managers.</li><li>Standardize terminology, field descriptions, and documentation patterns across product modules.</li></ul><div class="profile-role__skills" aria-label="Skills"><span class="profile-role__skills-label">Skills</span><span class="profile-role__skill">Product documentation</span><span class="profile-role__skill">Release notes</span><span class="profile-role__skill">Jira</span><span class="profile-role__skill">Business logic</span><span class="profile-role__skill">Documentation QA</span></div></section></div></div></article>
+
+<article class="profile-company"><span class="profile-company__logo profile-company__logo--monogram" aria-hidden="true">SE</span><div class="profile-company__body"><header class="profile-company__header"><h3 class="profile-company__name">Sensus</h3></header><div class="profile-company__roles"><section class="profile-role"><span class="profile-role__marker" aria-hidden="true"></span><h4 class="profile-role__title">Technical Writer</h4><p class="profile-role__employment">Part-time</p><p class="profile-role__dates">February 2026 - Present</p><p class="profile-role__description">Create and maintain technical, API, integration, and product documentation for payment-processing and payment-orchestration platforms.</p><ul class="profile-role__highlights"><li>Transform OpenAPI specifications, Jira requirements, source documents, screenshots, demos, and developer input into structured guidance for merchants, integrators, operations teams, and platform administrators.</li><li>Document platform configuration, merchants, payment methods, providers, routing, balances, orders, transactions, access control, and operational monitoring.</li><li>Produce endpoint references covering authentication and request signing, parameters, nested schemas, request and response examples, statuses, validation rules, errors, and webhooks.</li><li>Build reusable documentation components for schemas, code samples, tables, admonitions, and responsive API layouts using Material for MkDocs, Markdown, HTML, CSS, Python, and Jinja templates.</li><li>Create evidence-based conceptual models and developer-style diagrams for complex financial entities and workflows.</li><li>Maintain documentation in Git and Bitbucket, support CI/CD publishing, and troubleshoot navigation, styling, assets, local environments, and hosted builds.</li></ul><div class="profile-role__skills" aria-label="Skills"><span class="profile-role__skills-label">Skills</span><span class="profile-role__skill">API documentation</span><span class="profile-role__skill">OpenAPI</span><span class="profile-role__skill">Fintech</span><span class="profile-role__skill">Material for MkDocs</span><span class="profile-role__skill">Python</span><span class="profile-role__skill">HTML/CSS</span><span class="profile-role__skill">Git</span></div></section></div></div></article>
+
+<article class="profile-company"><span class="profile-company__logo profile-company__logo--monogram" aria-hidden="true">FI</span><div class="profile-company__body"><header class="profile-company__header"><h3 class="profile-company__name">Finamp</h3><div class="profile-company__meta"><span>Fintech company</span></div></header><div class="profile-company__roles"><section class="profile-role"><span class="profile-role__marker" aria-hidden="true"></span><h4 class="profile-role__title">Technical Writer</h4><p class="profile-role__employment">Part-time</p><p class="profile-role__dates">July 2025 - January 2026</p><p class="profile-role__description">Created structured business and system documentation for a fintech mobile application.</p><ul class="profile-role__highlights"><li>Prepared BRD and SRS documentation covering business logic, user flows, and system behavior.</li><li>Documented holders, users, devices, stored-value accounts, wallets, bonuses, vouchers, gift certificates, and digital stamps.</li><li>Defined wallet rules for activation, expiration, holds, freezes, and partial redemption.</li><li>Documented Admin Panel behavior, including dynamic fields, CRUD operations, entity management, and configuration rules.</li><li>Worked with product and development teams on diagrams and scenarios for onboarding, KYC, loyalty, and transactions.</li></ul><div class="profile-role__skills" aria-label="Skills"><span class="profile-role__skills-label">Skills</span><span class="profile-role__skill">BRD</span><span class="profile-role__skill">SRS</span><span class="profile-role__skill">Fintech</span><span class="profile-role__skill">User flows</span><span class="profile-role__skill">Admin systems</span></div></section></div></div></article>
+
+<article class="profile-company"><span class="profile-company__logo profile-company__logo--monogram" aria-hidden="true">YD</span><div class="profile-company__body"><header class="profile-company__header"><h3 class="profile-company__name">Yellow Duck Coders</h3></header><div class="profile-company__roles"><section class="profile-role"><span class="profile-role__marker" aria-hidden="true"></span><h4 class="profile-role__title">Technical Writer</h4><p class="profile-role__employment">Full-time</p><p class="profile-role__dates">February 2025 - November 2025</p><p class="profile-role__description">Produced documentation and supported requirements work across social platforms, transportation, mobile applications, fintech products, and other custom software.</p><ul class="profile-role__highlights"><li>Created BRDs, UI/UX descriptions, technical specifications, and concise API overviews.</li><li>Gathered and clarified requirements, refined functionality, and supported product decisions.</li><li>Designed diagrams, flowcharts, system maps, and user-flow scenarios for teams and stakeholders.</li><li>Communicated directly with clients to clarify design, functionality, and documentation details.</li><li>Collaborated with developers and QA engineers and wrote clear Jira tasks for backend and frontend teams.</li></ul><div class="profile-role__skills" aria-label="Skills"><span class="profile-role__skills-label">Skills</span><span class="profile-role__skill">Technical specifications</span><span class="profile-role__skill">Requirements</span><span class="profile-role__skill">Diagrams</span><span class="profile-role__skill">Jira</span><span class="profile-role__skill">Client communication</span></div></section></div></div></article>
+
+<article class="profile-company"><span class="profile-company__logo profile-company__logo--monogram" aria-hidden="true">GL</span><div class="profile-company__body"><header class="profile-company__header"><h3 class="profile-company__name">GeeksForLess</h3></header><div class="profile-company__roles"><section class="profile-role"><span class="profile-role__marker" aria-hidden="true"></span><h4 class="profile-role__title">Technical Support Specialist</h4><p class="profile-role__employment">Full-time</p><p class="profile-role__dates">May 2024 - February 2025</p><p class="profile-role__description">Provided technical support to customers and partners and created clear end-user instructions for hosting and infrastructure services.</p><ul class="profile-role__highlights"><li>Investigated technical issues with internal tools, tested software behavior, and handled ticket escalation in Jira.</li><li>Supported domain registration, WHOIS, transfers, renewals, DNS, virtual machines, FTP, file management, and .htaccess configuration.</li><li>Troubleshot POP3, IMAP, SMTP, SPF, DKIM, DMARC, mail clients, logs, and email headers using tools such as Telnet and OpenSSL.</li><li>Supported SSL installation and troubleshooting, MySQL, and phpMyAdmin.</li></ul><div class="profile-role__skills" aria-label="Skills"><span class="profile-role__skills-label">Skills</span><span class="profile-role__skill">Technical support</span><span class="profile-role__skill">DNS</span><span class="profile-role__skill">Email systems</span><span class="profile-role__skill">Web hosting</span><span class="profile-role__skill">Troubleshooting</span></div></section></div></div></article>
+
+<article class="profile-company"><span class="profile-company__logo profile-company__logo--monogram" aria-hidden="true">DO</span><div class="profile-company__body"><header class="profile-company__header"><h3 class="profile-company__name">Delta Express / Ontrack Transportation</h3></header><div class="profile-company__roles"><section class="profile-role"><span class="profile-role__marker" aria-hidden="true"></span><h4 class="profile-role__title">Safety Department Specialist</h4><p class="profile-role__employment">Full-time</p><p class="profile-role__dates">February 2022 - April 2024</p><p class="profile-role__description">Handled transportation safety operations, claims, customer communication, and documentation in a time-sensitive environment.</p><ul class="profile-role__highlights"><li>Managed problem-solving, crisis response, compliance, claims, and loss mitigation.</li><li>Prepared claim presentations, denial letters, letters of exclusivity, cargo release letters, and temperature and humidity reports.</li><li>Coordinated with contractors, brokers, customers, and insurance companies.</li><li>Contributed to the planning, coordination, and implementation of a refrigerated-goods transportation project.</li></ul><div class="profile-role__skills" aria-label="Skills"><span class="profile-role__skills-label">Skills</span><span class="profile-role__skill">Operations</span><span class="profile-role__skill">Claims</span><span class="profile-role__skill">Documentation</span><span class="profile-role__skill">Customer support</span><span class="profile-role__skill">Project coordination</span></div></section></div></div></article></div></section>
+
+<h2 id="skills">Skills<a class="headerlink" href="#skills" title="Permanent link">&para;</a></h2>
+<section class="profile-band profile-band--continuation" aria-label="Skills">
+  <div class="profile-skill-groups">
+    <div><h3>Documentation</h3><p>Technical documentation, user guides, API and integration documentation, BRD and SRS, technical specifications, release notes, test documentation, and information architecture.</p></div>
+    <div><h3>Tools and formats</h3><p>Confluence, Notion, Jira, Google Docs, Material for MkDocs, Markdown, HTML/CSS, Python, Jinja templates, Swagger/OpenAPI, JSON, Git, Bitbucket, Miro, Draw.io, Lightshot, and ScreenToGif.</p></div>
+    <div><h3>Methods</h3><p>Requirements clarification, diagramming, documentation QA, software testing for documentation validation, stakeholder collaboration, and structured analysis of product behavior.</p></div>
+    <div><h3>Languages</h3><p>English: B2 spoken, C1-C2 written. Ukrainian and Russian: native.</p></div>
+  </div>
+</section>
+
+<h2 id="education">Education<a class="headerlink" href="#education" title="Permanent link">&para;</a></h2>
+<section class="profile-band profile-band--continuation" aria-label="Education">
+  <div class="profile-record-list">
+    <article><h3>Master's degree in Philosophy</h3><p>Taras Shevchenko National University of Kyiv <span aria-hidden="true">&middot;</span> Graduated in 2025</p></article>
+    <article><h3>Master's degree in Applied Mechanics</h3><p>Sumy State University <span aria-hidden="true">&middot;</span> Graduated in 2025</p></article>
+  </div>
+</section>
+
+<h2 id="additional-training">Additional training<a class="headerlink" href="#additional-training" title="Permanent link">&para;</a></h2>
+<section class="profile-band profile-band--continuation" aria-label="Additional training">
+  <ul class="profile-training-list">
+    <li>Technical Writing: How to Write Software Documentation, Udemy</li>
+    <li>English Language Course, English Prime, 1.5 years</li>
+    <li>Python Essentials, Cisco Networking Academy - <a href="https://github.com/MaksimKulik/Python-projects/" target="_blank" rel="noopener">Python projects</a></li>
+    <li>HTML/CSS and basic programming for documentation - <a href="https://maksimkulik.github.io/fintech-documentation-portfolio/" target="_blank" rel="noopener">published portfolio</a> and <a href="https://github.com/MaksimKulik/fintech-documentation-portfolio" target="_blank" rel="noopener">source repository</a></li>
+    <li>SQL course, Codecademy</li>
+  </ul>
+</section>
+
+<h2 id="publications">Publications<a class="headerlink" href="#publications" title="Permanent link">&para;</a></h2>
+<section class="profile-band profile-band--continuation" aria-label="Publications">
+  <ol class="profile-publications">
+    <li>Kulyk, M. R. (2020). <em>The Epistemology of Severinus Boethius: Main Concepts and Meanings in the Context of Medieval Theology.</em> Bulletin of V. N. Karazin Kharkiv National University, Philosophy series, issue 63, pp. 109-118.</li>
+    <li>Kulyk, M. R. (2020). <em>The Concepts of Divina Intellegentia and Simplicia Forma in the Theological Epistemology of Severinus Boethius.</em> Proceedings of the International Scientific Conference "Days of Science of the Faculty of Philosophy - 2020," part 1, pp. 10-11. In Ukrainian.</li>
+    <li>Kulyk, M. R. (2025). <em>The Concepts of Intellectus Possibilis and Intellectus Agens in the Theory of Knowledge of Thomas Aquinas.</em> Proceedings of the International Scientific Conference "Days of Science of the Faculty of Philosophy - 2025," part 1, pp. 59-61. In English.</li>
+  </ol>
+</section>
+
+<h2 id="documentation-samples">Documentation samples<a class="headerlink" href="#documentation-samples" title="Permanent link">&para;</a></h2>
+<p><a class="api-page-link" href="../#selected-samples"><span class="api-page-link__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h12l-3-3 1.4-1.4L22.8 8l-5.4 5.4L16 12l3-3H7V7z"></path><path d="M17 17H5l3 3-1.4 1.4L1.2 16l5.4-5.4L8 12l-3 3h12v2z"></path></svg></span><span class="api-page-link__body"><span class="api-page-link__title">Explore the selected samples</span><span class="api-page-link__description">Review product guidance, API reference, and integration examples.</span></span><span class="api-page-link__arrow">›</span></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../api/authentication-webhooks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Authentication &amp; Webhooks">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Authentication & Webhooks
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Maksym Kulyk - Documentation portfolio
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/maksim.kulik.2025/" target="_blank" rel="noopener" title="Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%BA%D1%83%D0%BB%D0%B8%D0%BA-ab55b8186" target="_blank" rel="noopener" title="LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/javascripts/tables.js"></script>
+      
+        <script src="../assets/javascripts/api-components.js"></script>
+      
+    
+  </body>
+</html>
