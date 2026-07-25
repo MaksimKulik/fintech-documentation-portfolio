@@ -1,0 +1,84 @@
+site_name: Fintech Documentation Portfolio
+site_url: https://maksimkulik.github.io/fintech-documentation-portfolio/
+site_description: Selected product and API documentation samples for payment platforms.
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.select
+  icon:
+    logo: material/file-document-multiple-outline
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+  font:
+    text: Onest
+    code: Source Code Pro
+
+plugins:
+  - search
+  - macros
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/api-components.css
+  - stylesheets/signal-admonitions.css
+
+extra_javascript:
+  - assets/javascripts/tables.js
+  - assets/javascripts/api-components.js
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+
+use_directory_urls: true
+
+exclude_docs: |
+  _shared/**
+
+nav:
+  - Home: index.md
+  - Documentation Samples:
+      - Payment Routing: guides/payment-routing.md
+      - Create a Payment: api/create-payment.md
+      - Authentication & Webhooks: api/authentication-webhooks.md
+  - Profile: profile.md
+
+copyright: Maksym Kulyk - Documentation portfolio
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/maksim.kulik.2025/
+      name: Facebook
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%BA%D1%83%D0%BB%D0%B8%D0%BA-ab55b8186
+      name: LinkedIn
