@@ -6,7 +6,7 @@
 
 <div class="profile-actions">
   <a class="profile-action profile-action--primary" href="../assets/files/Maksym-Kulyk-CV.pdf" download>Download resume</a>
-  <a class="profile-action" href="#profile-experience">View experience</a>
+  <a class="profile-action" href="#experience">View experience</a>
 </div>
 
 <div class="profile-overview">
@@ -159,7 +159,7 @@
     <li>Technical Writing: How to Write Software Documentation, Udemy</li>
     <li>English Language Course, English Prime, 1.5 years</li>
     <li>Python Essentials, Cisco Networking Academy - <a href="https://github.com/MaksimKulik/Python-projects/" target="_blank" rel="noopener">Python projects</a></li>
-    <li>HTML/CSS for documentation - <a href="https://maksimkulik.github.io/Portfolio_rep/" target="_blank" rel="noopener">published portfolio</a> and <a href="https://github.com/MaksimKulik/Portfolio_rep" target="_blank" rel="noopener">source repository</a></li>
+    <li>HTML/CSS and basic programming for documentation - <a href="https://maksimkulik.github.io/fintech-documentation-portfolio/" target="_blank" rel="noopener">published portfolio</a> and <a href="https://github.com/MaksimKulik/fintech-documentation-portfolio" target="_blank" rel="noopener">source repository</a></li>
     <li>SQL course, Codecademy</li>
   </ul>
 </section>
