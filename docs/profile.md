@@ -5,7 +5,7 @@
 <p class="portfolio-lead">Technical writer experienced in product, user, API, and integration documentation for complex software platforms. I turn product requirements, developer input, interface behavior, and technical specifications into clear documentation for end users, administrators, integrators, and internal teams.</p>
 
 <div class="profile-actions">
-  <a class="profile-action profile-action--primary" href="../assets/files/Maksym-Kulyk-CV.pdf" download>Download resume</a>
+  <a class="profile-action profile-action--primary" href="../assets/files/CV_Kulyk_Maksym.pdf" download>Download resume</a>
   <a class="profile-action" href="#experience">View experience</a>
 </div>
 
@@ -156,7 +156,8 @@
 
 <section class="profile-band profile-band--continuation" aria-label="Additional training">
   <ul class="profile-training-list">
-    <li>Technical Writing: How to Write Software Documentation, Udemy</li>
+    <li>Technical Writing: How to Write Software Documentation, Udemy - <a href="https://ude.my/UC-ec4328ef-2958-4e58-9cfd-4ee27bd4236e" target="_blank" rel="noopener">View certificate</a></li>
+    <li>Learn API Technical Writing: JSON and XML for Writers, Udemy - <a href="https://ude.my/UC-2e8428f5-a0f8-4aa2-8e82-58eb2a8056a4" target="_blank" rel="noopener">View certificate</a></li>
     <li>English Language Course, English Prime, 1.5 years</li>
     <li>Python Essentials, Cisco Networking Academy - <a href="https://github.com/MaksimKulik/Python-projects/" target="_blank" rel="noopener">Python projects</a></li>
     <li>HTML/CSS and basic programming for documentation - <a href="https://maksimkulik.github.io/fintech-documentation-portfolio/" target="_blank" rel="noopener">published portfolio</a> and <a href="https://github.com/MaksimKulik/fintech-documentation-portfolio" target="_blank" rel="noopener">source repository</a></li>
