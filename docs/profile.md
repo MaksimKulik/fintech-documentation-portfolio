@@ -15,7 +15,7 @@
     <dl class="profile-contact-list">
       <div><dt>Email</dt><dd><a href="mailto:maksimkulik55@gmail.com">maksimkulik55@gmail.com</a></dd></div>
       <div><dt>Phone</dt><dd><a href="tel:+380992380654">+380 99 238 0654</a></dd></div>
-      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%BA%D1%83%D0%BB%D0%B8%D0%BA-ab55b8186" target="_blank" rel="noopener">Professional profile</a></dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/maksym-kulyk-ab55b8186" target="_blank" rel="noopener">Professional profile</a></dd></div>
       <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/maksim.kulik.2025/" target="_blank" rel="noopener">Personal profile</a></dd></div>
     </dl>
   </section>
