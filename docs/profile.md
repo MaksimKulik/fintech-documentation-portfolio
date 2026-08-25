@@ -139,7 +139,7 @@
     <div><h3>Documentation</h3><p>Technical documentation, user guides, API and integration documentation, BRD and SRS, technical specifications, release notes, test documentation, and information architecture.</p></div>
     <div><h3>Tools and formats</h3><p>Confluence, Notion, Jira, Google Docs, Material for MkDocs, Markdown, HTML/CSS, Python, Jinja templates, Swagger/OpenAPI, JSON, Git, Bitbucket, Miro, Draw.io, Lightshot, and ScreenToGif.</p></div>
     <div><h3>Methods</h3><p>Requirements clarification, diagramming, documentation QA, software testing for documentation validation, stakeholder collaboration, and structured analysis of product behavior.</p></div>
-    <div><h3>Languages</h3><p>English: B2 spoken, C1-C2 written. Ukrainian and Russian: native.</p></div>
+    <div><h3>Languages</h3><p>English: C1 spoken, C2 written. Ukrainian and Russian: native.</p></div>
   </div>
 </section>
 
