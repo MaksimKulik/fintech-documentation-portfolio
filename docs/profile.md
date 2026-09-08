@@ -33,7 +33,7 @@
 {{ profile_role(
   title="Technical Writer",
   employment_type="Full-time",
-  dates="November 2025 - September 2026",
+  dates="November 2025 – September 2026",
   description="Own full-cycle product documentation for platform products, with an emphasis on business logic clarity, operational workflows, configuration transparency, and consistent information architecture.",
   highlights=[
     "Create structured documentation for BackOffice, User Management, Admin Area, CRM, CMS, Risk Management, Payments, and other complex product modules.",
@@ -51,7 +51,7 @@
 {{ profile_role(
   title="Technical Writer",
   employment_type="Part-time",
-  dates="February 2026 - August 2026",
+  dates="February 2026 – August 2026",
   description="Create and maintain technical, API, integration, and product documentation for payment-processing and payment-orchestration platforms.",
   highlights=[
     "Transform OpenAPI specifications, Jira requirements, source documents, screenshots, demos, and developer input into structured guidance for merchants, integrators, operations teams, and platform administrators.",
@@ -69,7 +69,7 @@
 {{ profile_role(
   title="Technical Writer",
   employment_type="Part-time",
-  dates="July 2025 - January 2026",
+  dates="July 2025 – January 2026",
   description="Created structured business and system documentation for a fintech mobile application.",
   highlights=[
     "Prepared BRD and SRS documentation covering business logic, user flows, and system behavior.",
@@ -86,7 +86,7 @@
 {{ profile_role(
   title="Technical Writer",
   employment_type="Full-time",
-  dates="February 2025 - November 2025",
+  dates="February 2025 – November 2025",
   description="Produced documentation and supported requirements work across social platforms, transportation, mobile applications, fintech products, and other custom software.",
   highlights=[
     "Created BRDs, UI/UX descriptions, technical specifications, and concise API overviews.",
@@ -103,7 +103,7 @@
 {{ profile_role(
   title="Technical Support Specialist",
   employment_type="Full-time",
-  dates="May 2024 - February 2025",
+  dates="May 2024 – February 2025",
   description="Provided technical support to customers and partners and created clear end-user instructions for hosting and infrastructure services.",
   highlights=[
     "Investigated technical issues with internal tools, tested software behavior, and handled ticket escalation in Jira.",
@@ -119,7 +119,7 @@
 {{ profile_role(
   title="Safety Department Specialist",
   employment_type="Full-time",
-  dates="February 2022 - April 2024",
+  dates="February 2022 – April 2024",
   description="Handled transportation safety operations, claims, customer communication, and documentation in a time-sensitive environment.",
   highlights=[
     "Managed problem-solving, crisis response, compliance, claims, and loss mitigation.",
