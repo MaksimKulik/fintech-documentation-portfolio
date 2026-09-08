@@ -33,16 +33,17 @@
 {{ profile_role(
   title="Technical Writer",
   employment_type="Full-time",
-  dates="November 2025 - Present",
+  dates="November 2025 - September 2026",
   description="Own full-cycle product documentation for platform products, with an emphasis on business logic clarity, operational workflows, configuration transparency, and consistent information architecture.",
   highlights=[
     "Create structured documentation for BackOffice, User Management, Admin Area, CRM, CMS, Risk Management, Payments, and other complex product modules.",
     "Describe UI elements, workflows, tables, validation rules, configuration logic, system behavior, and edge cases.",
     "Prepare release notes with clear functional impact and classification.",
+    "Support and mentor other Technical Writers on documentation style, content structuring, and the release notes creation process.",
     "Analyze Jira tasks, videos, demos, and backend changes, then validate the resulting documentation with developers, QA engineers, and product managers.",
     "Standardize terminology, field descriptions, and documentation patterns across product modules."
   ],
-  skills=["Product documentation", "Release notes", "Jira", "Business logic", "Documentation QA"]
+  skills=["Product documentation", "Release notes", "Mentoring", "Jira", "Business logic", "Documentation QA"]
 ) }}
 {% endcall %}
 
