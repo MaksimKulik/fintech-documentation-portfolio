@@ -51,7 +51,7 @@
 {{ profile_role(
   title="Technical Writer",
   employment_type="Part-time",
-  dates="February 2026 - Present",
+  dates="February 2026 - August 2026",
   description="Create and maintain technical, API, integration, and product documentation for payment-processing and payment-orchestration platforms.",
   highlights=[
     "Transform OpenAPI specifications, Jira requirements, source documents, screenshots, demos, and developer input into structured guidance for merchants, integrators, operations teams, and platform administrators.",
